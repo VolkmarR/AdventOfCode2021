@@ -38,10 +38,14 @@ public class Day06Solver : SolverBase
 
     long CountFishs(int days)
     {
+        var cache = new Dictionary<int, long>();
         long result = 0;
         foreach (var item in Data)
-            result += CalcFish(days, item);
-
+        {
+            if (!cache.ContainsKey(item))
+                cache[item] = CalcFish(days, item);
+            result += cache[item];
+        }
         return result;
     }
 
