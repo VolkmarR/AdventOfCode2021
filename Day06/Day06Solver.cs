@@ -23,10 +23,10 @@ public class Day06Solver : SolverBase
         Data = data[0].Split(",").Select(q => short.Parse(q)).ToList();
     }
 
-    int CalcFish(int days, short start)
+    long CalcFish(int days, short start)
     {
         var newFish = new List<int>();
-        int result = 1;
+        long result = 1;
         for (int i = days - start; i > 0; i -= 7)
             newFish.Add(i);
 
