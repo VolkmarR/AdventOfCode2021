@@ -25,16 +25,16 @@ public abstract class SolverBase
         return Save(outputFileName, Solve2()?.ToString());
     }
 
-    public void ExecuteExample1(object expectedResult)
+    public void ExecuteExample1(string expectedResult)
     {
         Parse(Load("Example.txt"));
-        Assert.Equal(expectedResult, Solve1());
+        Assert.Equal(expectedResult, Solve1().ToString());
     }
 
-    public void ExecuteExample2(object expectedResult)
+    public void ExecuteExample2(string expectedResult)
     {
         Parse(Load("Example.txt"));
-        Assert.Equal(expectedResult, Solve2());
+        Assert.Equal(expectedResult, Solve2().ToString());
     }
 
     protected abstract void Parse(List<string> data);
