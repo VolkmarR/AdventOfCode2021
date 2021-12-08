@@ -7,7 +7,7 @@ public class Day03Tests
 
     [Fact] public void Step1WithExample() => new Day03Solver().ExecuteExample1("??");
         
-    [Fact] public void Step2WithExample() => new Day03Solver().ExecuteExample2(230);
+    [Fact] public void Step2WithExample() => new Day03Solver().ExecuteExample2("230");
 
     [Fact] public void Step1WithPuzzleInput() => Output.WriteLine(new Day03Solver().ExecutePuzzle1());
         
