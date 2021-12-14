@@ -12,6 +12,13 @@ static class Extensions
         countDictionary[key] = ++current;
     }
 
+    public static void IncrementCount<T>(this Dictionary<T, long> countDictionary, T key)
+    {
+        countDictionary.TryGetValue(key, out var current);
+        countDictionary[key] = ++current;
+    }
+
+
     public static string[] Split(this string text, StringSplitOptions stringSplitOptions, params char[] separators)
         => text.Split(separators, stringSplitOptions);
 
